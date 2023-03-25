@@ -105,6 +105,10 @@ nav img{
     transition: 1s;
 }
 
+nav .fa-solid {
+    display: none;
+}
+
 .font-color-change::after{
     content: 'Nepal Adarsha ';
     animation: font-color-change 0.9s infinite linear;
@@ -114,6 +118,39 @@ nav img{
 @keyframes font-color-change{
     50%{content: "Nepal Adarsha ";
     color: #fff;}
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 42px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+     .nav-links{
+        position: absolute;
+        background: #2b39ff;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+     }
+
+     nav .fa-solid {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+     }
+
+     .nav-links ul{
+        padding: 30px;
+     }
 }
 
 /*----------- course ---------*/
@@ -164,7 +201,7 @@ h3{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
-@media screen and (max-width: 1080px){
+@media(max-width: 1080px){
     .row{
         flex-direction: column;
     }
@@ -302,7 +339,7 @@ h3{
     color: #f44336;
 }
 
-@media screen and (max-width: 1080px){
+@media(max-width: 1080px){
     .testimonial-col img{
         margin-left: 5px;
         margin-right: 15px;
@@ -350,7 +387,7 @@ h3{
     color: #fff;}
 }
 
-@media screen and (max-width: 1080px){
+@media(max-width: 1080px){
     .cta h1{
         font-size: 24px;
     }

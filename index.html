@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="with=device-width initial-scale=1.0">
+        <meta name="viewport" content="with=device-width", initial-scale="1.0">
         <title>Nepal Adarsha</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,8 @@
         <section class="header">
             <nav>
                 <a href="index.html"><img src="images/logo.png" alt=""></a> 
-                <div class="nav-links">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
@@ -24,6 +25,7 @@
                         <li><a href="">CONTACT</a></li>
                     </ul>
                 </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
 
             <div class="text-box">
@@ -161,5 +163,16 @@
         </div>
         <p>Made with <i class="fa-solid fa-heart"></i> by Class 12 Science</p>
         </section>
+
+        <!-------JavaScript for Toggle Menu------->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";  
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";  
+            }
+        </script>
     </body>
 </html>
