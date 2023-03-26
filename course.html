@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="with=device-width", initial-scale="1.0">
-        <title>Nepal Adarsha</title>
+        <title>Courses</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,15 +15,17 @@
         <section class="sub-header">
             <nav>
                 <a href="index.html"><img src="images/logo.png" alt=""></a> 
-                <div class="nav-links">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
                         <li><a href="course.html">COURSE</a></li>
                         <li><a href="">BLOG</a></li>
                         <li><a href="">CONTACT</a></li>
                     </ul>
                 </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
             <h1>Courses We Offer</h1>
         </section>
@@ -179,5 +181,15 @@
         <p>Made with <i class="fa-solid fa-heart"></i> by Class 12 Science</p>
         </section>
     </div>
+        <!-- -----JavaScript for Toggle Menu----- -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";  
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";  
+            }
+        </script>
     </body>
 </html>
